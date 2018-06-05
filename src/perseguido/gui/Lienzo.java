@@ -20,7 +20,14 @@ import java.util.Timer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+<<<<<<< HEAD
 import perseguido.cliente.Datos;
+=======
+<<<<<<< HEAD
+import perseguido.cliente.Datos;
+=======
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
 
 import perseguido.logica.Enemigo;
 import perseguido.logica.Heroe;
@@ -52,9 +59,18 @@ public class Lienzo extends Canvas implements KeyListener {
     int texto3=20;
     String puntos;
     String [] m2 = null;
+<<<<<<< HEAD
     Datos d;
     boolean a=false;
     String mensaje;
+=======
+<<<<<<< HEAD
+    Datos d;
+    boolean a=false;
+    String mensaje;
+=======
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
     
     String texto2;
 
@@ -96,9 +112,18 @@ public class Lienzo extends Canvas implements KeyListener {
         timer = new Timer();
         timer.schedule(new Actualizador(), 0, 100);
         imgBuffer = new BufferedImage(600, 600, BufferedImage.TRANSLUCENT);
+<<<<<<< HEAD
         for (int i = 0; i < 4; i++) {
             enemigos.add(new Enemigo());
         }
+=======
+<<<<<<< HEAD
+        for (int i = 0; i < 4; i++) {
+            enemigos.add(new Enemigo());
+        }
+=======
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
         
 
     }
@@ -116,6 +141,15 @@ public class Lienzo extends Canvas implements KeyListener {
                 if (matriz[f][c].equals("2")) {
                     tesoro.add(new Tesoro(f * 32, c * 32));
                 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                if (matriz[f][c].equals("5")) {
+                    enemigos.add(new Enemigo(f * 32, c * 32));
+                }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
             }
         }
     }
@@ -158,13 +192,30 @@ public class Lienzo extends Canvas implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
+<<<<<<< HEAD
         heroe.update(e.getKeyChar());
+=======
+<<<<<<< HEAD
+        heroe.update(e.getKeyChar());
+=======
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
+<<<<<<< HEAD
       
          
+=======
+<<<<<<< HEAD
+        
+         
+=======
+//        heroe.update(e.getKeyCode());
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
     }
 
     @Override
@@ -180,6 +231,11 @@ public class Lienzo extends Canvas implements KeyListener {
             Iterator<Personaje> it2 = enemigos.iterator();
             Iterator<Personaje> it3 = recompenssa.iterator();
             Iterator<Personaje> it4 = tesoro.iterator();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+             
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
 
             heroe.update();
            
@@ -199,6 +255,25 @@ public class Lienzo extends Canvas implements KeyListener {
                 }
 
                  
+<<<<<<< HEAD
+=======
+=======
+//          
+            Marcador marcador= new Marcador(); 
+            heroe.update();
+
+            repaint();
+//             Marcador marcador= new Marcador();
+//            marcador.setVisible(true);
+            
+            while (it.hasNext()) {
+                Personaje r = it.next();
+                if (r.getRect().intersects(heroe.getRect())) {
+                    heroe.cambiarSentido();
+                    break;
+                }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
             }
             while (it2.hasNext()) {
                 Personaje r = it2.next();
@@ -210,33 +285,77 @@ public class Lienzo extends Canvas implements KeyListener {
                         
                         break;
                     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
 
                 }
                  repaint();
                
                  
+<<<<<<< HEAD
             } 
             
+=======
+                 
+            } 
+            
+=======
+                    
+                    
+
+                }
+                
+                 
+            }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
             
             
             while (it4.hasNext()) {
                 
                 
                 Personaje r = it4.next();
+<<<<<<< HEAD
                 
+=======
+<<<<<<< HEAD
+                
+=======
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
                 if (r.getRect().intersects(heroe.getRect())) {
                     tesoro.remove(r);
                     
                     int hola=(texto)*(cont++);
                     puntos= Integer.toString(hola);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
                     
                       try {
                         a=true;
                         dataOutput.writeUTF(puntos);                       
+<<<<<<< HEAD
+=======
+=======
+                    marcador.cuadro.setText(puntos);
+                    try {
+                        dataOutput.writeUTF(puntos);
+//                        String texto2=dataInput.readUTF();
+//                        System.out.println(texto2);
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
                         
                     } catch (IOException ex) {
                         Logger.getLogger(Lienzo.class.getName()).log(Level.SEVERE, null, ex);
                     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
                     
                     
                     break;
@@ -246,6 +365,23 @@ public class Lienzo extends Canvas implements KeyListener {
                 
                 
                  
+<<<<<<< HEAD
+=======
+=======
+//                     try {
+//                        String texto2=dataInput.readUTF();
+//                        System.out.println(texto2);
+//                        if(texto2.equalsIgnoreCase(texto)){
+//                        tesoro.remove(r);}
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(Lienzo.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+                
+                    break;
+                  
+                }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
                
             }
             
@@ -266,11 +402,24 @@ public class Lienzo extends Canvas implements KeyListener {
                     
                     int hola=(texto3)*(cont++);
                     String puntos= Integer.toString(hola);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
                     
                     
                     try {
                         a=true;
                         dataOutput.writeUTF(puntos);                       
+<<<<<<< HEAD
+=======
+=======
+                    marcador.cuadro.setText(puntos);
+                    try {
+                        
+                        dataOutput.writeUTF(puntos);
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
                         
                     } catch (IOException ex) {
                         Logger.getLogger(Lienzo.class.getName()).log(Level.SEVERE, null, ex);
@@ -280,6 +429,10 @@ public class Lienzo extends Canvas implements KeyListener {
                     break;
                 }
             
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
              try { 
                 
                  if(a==true){
@@ -296,6 +449,12 @@ public class Lienzo extends Canvas implements KeyListener {
             } catch (IOException ex) {
                 Logger.getLogger(Lienzo.class.getName()).log(Level.SEVERE, null, ex);
             }
+<<<<<<< HEAD
+=======
+=======
+            
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
+>>>>>>> 59a5ba94116c9643de711254db277efedc07a02d
             
             }
 
