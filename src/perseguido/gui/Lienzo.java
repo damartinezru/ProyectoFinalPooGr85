@@ -92,9 +92,6 @@ public class Lienzo extends Canvas implements KeyListener {
         timer = new Timer();
         timer.schedule(new Actualizador(), 0, 100);
         imgBuffer = new BufferedImage(600, 600, BufferedImage.TRANSLUCENT);
-        for (int i = 0; i < 4; i++) {
-            enemigos.add(new Enemigo());
-        }
         
 
     }
@@ -111,6 +108,9 @@ public class Lienzo extends Canvas implements KeyListener {
                 }
                 if (matriz[f][c].equals("2")) {
                     tesoro.add(new Tesoro(f * 32, c * 32));
+                }
+                if (matriz[f][c].equals("5")) {
+                    enemigos.add(new Enemigo(f * 32, c * 32));
                 }
             }
         }

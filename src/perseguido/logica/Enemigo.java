@@ -43,6 +43,30 @@ public class Enemigo implements Personaje {
     int yVel = 0;
     int contador = 0;
 
+    public Enemigo (int x, int y){
+        Random r = new Random();
+        xPos = x;
+        yPos = y;
+        sentido = r.nextInt(4);
+        switch (sentido) {
+            case 0:
+                xVel = 32;
+                yVel = 0;
+                break;
+            case 1:
+                xVel = 0;
+                yVel = 32;
+                break;
+            case 2:
+                xVel = -32;
+                yVel = 0;
+                break;
+            case 3:
+                xVel = 0;
+                yVel = -32;
+                break;
+        }
+    }
     public Enemigo() {
         Random r = new Random();
         xPos = r.nextInt(600);
