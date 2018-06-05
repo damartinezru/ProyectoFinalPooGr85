@@ -57,11 +57,31 @@ public class HiloCliente implements Runnable, KeyListener{
                 
                 String texto = dataInput.readUTF();
                 m.add(texto);
+<<<<<<< HEAD
                 dataOutput.writeUTF(texto);
+=======
+                //pasarlo a string
+                //luego de eso hacer interfaz en lienzo que se abra apenas empieza el juego
+                //en esa interfaz agregar el numero del marcador
+                //y mirar como borrar del mapa los tesoros
+                
+                    
+                    
+                    
+//                    System.out.println("eL Otro cliente"+texto);
+                    
+                    //aqui va el output recorriendo todo el array
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
                   
                     for (int i=0; i<m.size();i++){
                     System.out.println(m.get(i));
                     
+<<<<<<< HEAD
+=======
+//                    if(s.getId()==1 && m.get(i).equals("uno")){
+//                    dataOutput.writeUTF("mas 2");
+//                    }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
                     }
                     
                     

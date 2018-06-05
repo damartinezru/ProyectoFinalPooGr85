@@ -29,7 +29,11 @@ public class ControlCliente implements KeyListener{
     Lienzo lienzo;
     Marcador marcador= new Marcador();
         
+<<<<<<< HEAD
     
+=======
+    //Heroe h= new Heroe();
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
 
     public void setLienzo(Lienzo lienzo) {
         this.lienzo = lienzo;
@@ -54,7 +58,16 @@ public class ControlCliente implements KeyListener{
         }
     }
     
+<<<<<<< HEAD
 
+=======
+  
+//   public void imp(){
+//    
+//       System.out.println(lienzo.getDataInput());
+//   
+//   }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
 
     @Override
     public void keyTyped(KeyEvent e) {

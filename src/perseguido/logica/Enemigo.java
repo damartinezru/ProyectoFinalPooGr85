@@ -42,7 +42,36 @@ public class Enemigo implements Personaje {
     int xVel = 0;
     int yVel = 0;
     int contador = 0;
+<<<<<<< HEAD
 
+=======
+    int contador2 = 0;
+
+    public Enemigo (int x, int y){
+        Random r = new Random();
+        xPos = x;
+        yPos = y;
+        sentido = r.nextInt(4);
+        switch (sentido) {
+            case 0:
+                xVel = 32;
+                yVel = 0;
+                break;
+            case 1:
+                xVel = 0;
+                yVel = 32;
+                break;
+            case 2:
+                xVel = -32;
+                yVel = 0;
+                break;
+            case 3:
+                xVel = 0;
+                yVel = -32;
+                break;
+        }
+    }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
     public Enemigo() {
         Random r = new Random();
         xPos = r.nextInt(600);
@@ -81,6 +110,14 @@ public class Enemigo implements Personaje {
             xPos += xVel;
             yPos += yVel;
             contador = 0;
+<<<<<<< HEAD
+=======
+            contador2++;
+            if (contador2 == 6){
+                this.cambiarSentido();
+                contador2=0;
+            }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
         }
         cont++;
         cont = cont % 3;
@@ -94,7 +131,11 @@ public class Enemigo implements Personaje {
     @Override
     public void cambiarSentido() {
         Random r = new Random();
+<<<<<<< HEAD
         int opcion = r.nextInt(2);
+=======
+        int opcion = r.nextInt(3);
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
         switch (sentido) {
             case 0:
                 xPos += -32;
@@ -103,11 +144,23 @@ public class Enemigo implements Personaje {
                     xVel = 0;
                     yVel = 32;
                     sentido = 1;
+<<<<<<< HEAD
                 } else {
+=======
+                } else if (opcion == 1) {
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
                     xVel = 0;
                     yVel = -32;
                     sentido = 3;
                 }
+<<<<<<< HEAD
+=======
+                else {
+                    xVel = -32;
+                    yVel = 0;
+                    sentido = 2;
+                }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
                 break;
             case 1:
                 xPos += 0;
@@ -116,11 +169,23 @@ public class Enemigo implements Personaje {
                     xVel = 32;
                     yVel = 0;
                     sentido = 0;
+<<<<<<< HEAD
                 } else {
+=======
+                } else if (opcion == 1) {
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
                     xVel = -32;
                     yVel = 0;
                     sentido = 2;
                 }
+<<<<<<< HEAD
+=======
+                else {
+                    xVel = 0;
+                    yVel = -32;
+                    sentido = 3;
+                }
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
                 break;
             case 2:
                 xPos += 32;
@@ -129,10 +194,21 @@ public class Enemigo implements Personaje {
                     xVel = 0;
                     yVel = 32;
                     sentido = 1;
+<<<<<<< HEAD
                 } else {
                     xVel = 0;
                     yVel = -32;
                     sentido = 3;
+=======
+                } else if (opcion == 1) {
+                    xVel = 0;
+                    yVel = -32;
+                    sentido = 3;
+                } else {
+                    xVel = 32;
+                    yVel = 0;
+                    sentido = 0;
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
                 }
                 break;
             case 3:
@@ -142,10 +218,21 @@ public class Enemigo implements Personaje {
                     xVel = 32;
                     yVel = 0;
                     sentido = 0;
+<<<<<<< HEAD
                 } else {
                     xVel = -32;
                     yVel = 0;
                     sentido = 2;
+=======
+                } else if (opcion == 1) {
+                    xVel = -32;
+                    yVel = 0;
+                    sentido = 2;
+                } else {
+                    xVel = 0;
+                    yVel = 32;
+                    sentido = 1;
+>>>>>>> d6ad19ed95ad6995b728d7d79860a016dee67d28
                 }
                 break;
         }
