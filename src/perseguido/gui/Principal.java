@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import perseguido.cliente.ControlCliente;
 import perseguido.utils.FileUtils;
 import perseguido.musica.musica;
+import perseguido.musica.musica2;
 /**
  *
  * @author daza
@@ -20,7 +21,7 @@ public class Principal extends JFrame{
     String[][] matriz;
     ControlCliente control;
     Marcador marcador= new Marcador();
-    musica reproducir = new musica();
+
     
     
     public Principal(ControlCliente c){
@@ -28,8 +29,9 @@ public class Principal extends JFrame{
     }
     
     public void iniciarComponentes(ControlCliente c){
-        
-    reproducir.setVisible(true);
+//    reproducir.setVisible(true);
+        musica2 musicadefondo = new musica2();
+        musicadefondo.reproducirCancion();
         control = c;
         String archivo = fu.archivoAleatorio("../archivos");
         matriz = fu.fileToMatriz("../archivos/" + archivo);

@@ -16,6 +16,7 @@ import java.awt.Rectangle;
 public interface Personaje {
     public void draw(Graphics g);
     public void update(int c);
+    public void update(char c);
     public void update();
     public String movimiento(int c);
     public Rectangle getRect();

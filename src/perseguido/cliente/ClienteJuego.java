@@ -17,19 +17,18 @@ public class ClienteJuego {
 
     public ClienteJuego() {
         try {
-
             socket = new Socket("localhost", 8085);
             ControlCliente control = new ControlCliente(socket);
             Principal p = new Principal(control);
             p.setVisible(true);
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public static void main(String[] args) {
-        new ClienteJuego();
-
+        new ClienteJuego();  
     }
 
 }

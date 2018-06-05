@@ -27,7 +27,7 @@ import javax.swing.DefaultListModel;
 public class Servidor {
    
     private int id=1;
-   
+    
     
     
      
@@ -48,22 +48,15 @@ public class Servidor {
     
     public Servidor() 
     {
-       
         try
         {
-           
-            
             ServerSocket socketServidor = new ServerSocket(8085);
             while (true)
             {
                 Socket cliente = socketServidor.accept();
                 Runnable nuevoCliente = new HiloCliente(cliente);
                 Thread hilo = new Thread(nuevoCliente);
-                hilo.start();
-                
-                
-                
-                                
+                hilo.start();              
             }
             
             
@@ -77,9 +70,4 @@ public class Servidor {
     {
         new Servidor();
     }
-
- 
-    
-    
-    
 }

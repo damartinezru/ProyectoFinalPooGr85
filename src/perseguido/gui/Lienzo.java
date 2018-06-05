@@ -159,7 +159,7 @@ public class Lienzo extends Canvas implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        heroe.update(e.getKeyCode());
+//        heroe.update(e.getKeyCode());
     }
 
     @Override
@@ -178,7 +178,6 @@ public class Lienzo extends Canvas implements KeyListener {
 //          
             Marcador marcador= new Marcador(); 
             heroe.update();
-            System.out.println("actualizo a heroe");
 
             repaint();
 //             Marcador marcador= new Marcador();
@@ -219,10 +218,8 @@ public class Lienzo extends Canvas implements KeyListener {
                     
                     int hola=(texto)*(cont++);
                     puntos= Integer.toString(hola);
-                    System.out.println(hola);
                     marcador.cuadro.setText(puntos);
                     try {
-                        
                         dataOutput.writeUTF(puntos);
 //                        String texto2=dataInput.readUTF();
 //                        System.out.println(texto2);
@@ -262,12 +259,10 @@ public class Lienzo extends Canvas implements KeyListener {
                     
                     int hola=(texto3)*(cont++);
                     String puntos= Integer.toString(hola);
-                    System.out.println(hola);
                     marcador.cuadro.setText(puntos);
                     try {
                         
                         dataOutput.writeUTF(puntos);
-//                        
                         
                     } catch (IOException ex) {
                         Logger.getLogger(Lienzo.class.getName()).log(Level.SEVERE, null, ex);

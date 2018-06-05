@@ -62,7 +62,8 @@ public class musica extends javax.swing.JFrame {
 
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
       AudioClip musica;
-        musica = java.applet.Applet.newAudioClip(getClass().getResource("/perseguido.musica/Nivel 2-1.mp3"));
+        musica = java.applet.Applet.newAudioClip(getClass().getResource("/perseguido.musica/BMG.wav"));
+        musica.play();
         musica.loop();
     }//GEN-LAST:event_playActionPerformed
 

@@ -35,7 +35,6 @@ public class ControlCliente implements KeyListener{
         this.lienzo = lienzo;
         lienzo.setDataInput(dataInput);
         lienzo.setDataOutput(dataOutput);
-                
     }
     
     
@@ -63,8 +62,10 @@ public class ControlCliente implements KeyListener{
 //   }
 
     @Override
-    public void keyTyped(KeyEvent ke) {
-        
+    public void keyTyped(KeyEvent e) {
+        lienzo.getHeroe().update(e.getKeyChar());
+        lienzo.getDataOutput();
+        marcador.cuadro.setText(lienzo.getPuntos());
     }
 
     @Override
@@ -76,14 +77,14 @@ public class ControlCliente implements KeyListener{
 //        } catch (IOException ex) {
 //            Logger.getLogger(HiloCliente.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-            lienzo.getHeroe().update(e.getKeyCode());
-            lienzo.getDataOutput();
-            marcador.cuadro.setText(lienzo.getPuntos());
+//            lienzo.getHeroe().update(e.getKeyCode());
+//            lienzo.getDataOutput();
+//            marcador.cuadro.setText(lienzo.getPuntos());
            
     }
 
     @Override
-    public void keyReleased(KeyEvent ke) {
+    public void keyReleased(KeyEvent e) {
         
     }
     
