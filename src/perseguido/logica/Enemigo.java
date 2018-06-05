@@ -42,6 +42,7 @@ public class Enemigo implements Personaje {
     int xVel = 0;
     int yVel = 0;
     int contador = 0;
+    int contador2 = 0;
 
     public Enemigo (int x, int y){
         Random r = new Random();
@@ -105,6 +106,11 @@ public class Enemigo implements Personaje {
             xPos += xVel;
             yPos += yVel;
             contador = 0;
+            contador2++;
+            if (contador2 == 6){
+                this.cambiarSentido();
+                contador2=0;
+            }
         }
         cont++;
         cont = cont % 3;
