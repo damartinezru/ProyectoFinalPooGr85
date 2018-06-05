@@ -118,7 +118,7 @@ public class Enemigo implements Personaje {
     @Override
     public void cambiarSentido() {
         Random r = new Random();
-        int opcion = r.nextInt(2);
+        int opcion = r.nextInt(3);
         switch (sentido) {
             case 0:
                 xPos += -32;
@@ -127,10 +127,15 @@ public class Enemigo implements Personaje {
                     xVel = 0;
                     yVel = 32;
                     sentido = 1;
-                } else {
+                } else if (opcion == 1) {
                     xVel = 0;
                     yVel = -32;
                     sentido = 3;
+                }
+                else {
+                    xVel = -32;
+                    yVel = 0;
+                    sentido = 2;
                 }
                 break;
             case 1:
@@ -140,10 +145,15 @@ public class Enemigo implements Personaje {
                     xVel = 32;
                     yVel = 0;
                     sentido = 0;
-                } else {
+                } else if (opcion == 1) {
                     xVel = -32;
                     yVel = 0;
                     sentido = 2;
+                }
+                else {
+                    xVel = 0;
+                    yVel = -32;
+                    sentido = 3;
                 }
                 break;
             case 2:
@@ -153,10 +163,14 @@ public class Enemigo implements Personaje {
                     xVel = 0;
                     yVel = 32;
                     sentido = 1;
-                } else {
+                } else if (opcion == 1) {
                     xVel = 0;
                     yVel = -32;
                     sentido = 3;
+                } else {
+                    xVel = 32;
+                    yVel = 0;
+                    sentido = 0;
                 }
                 break;
             case 3:
@@ -166,10 +180,14 @@ public class Enemigo implements Personaje {
                     xVel = 32;
                     yVel = 0;
                     sentido = 0;
-                } else {
+                } else if (opcion == 1) {
                     xVel = -32;
                     yVel = 0;
                     sentido = 2;
+                } else {
+                    xVel = 0;
+                    yVel = 32;
+                    sentido = 1;
                 }
                 break;
         }
